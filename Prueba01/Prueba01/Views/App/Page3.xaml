@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Prueba01.Views.App.Page3"
+             Title="Estilos dinamicos">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="baseStyle"
+                   TargetType="View">
+                <Setter Property="HorizontalOptions"
+                        Value="Center"/>
+                <Setter Property="VerticalOptions"
+                        Value="CenterAndExpand"/>
+                <Setter Property="BackgroundColor"
+                        Value="LightSeaGreen"/>
+            </Style>
+            <Style TargetType="Label"
+                   BasedOn="{StaticResource baseStyle}">
+            </Style>
+            <Style TargetType="Button"
+                   BasedOn="{StaticResource baseStyle}">
+                
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+        <StackLayout Padding="0,20,0,0">
+            <Button Text="Ir a la primera pagina."
+                    Clicked="Button_Clicked"></Button>
+            <Label Text="Title Style"
+                   Style="{DynamicResource TitleStyle}"/>
+            <Label Text="Subtitle Style"
+                   Style="{DynamicResource SubtitleStyle}"/>
+            <Label Text="Body Style"
+                   Style="{DynamicResource BodyStyle}"/>
+            <Label Text="Caption Style"
+                   Style="{DynamicResource CaptionStyle}"/>
+            <Label Text="List item detail text Style"
+                   Style="{DynamicResource ListItemDetailTextStyle}"/>
+            <Label Text="List item text Style"
+                   Style="{DynamicResource ListItemTextStyle}"/>
+            <Label Text="No Style"/>
+            <StackLayout>
+            <Button Text="Estilos Heredados"/>
+        </StackLayout>
+        </StackLayout>
+</ContentPage>

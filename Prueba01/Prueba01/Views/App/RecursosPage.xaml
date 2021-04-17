@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Prueba01.Views.App.RecursosPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="AntiqueWhite">
+                <SearchBar Placeholder="Buscar"
+                       CancelButtonColor="Red"
+                       SearchButtonPressed="SearchBar_SearchButtonPressed"/>
+                <Label VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Text="asdasd"
+                   TextColor="GhostWhite"
+                   FontAttributes="Bold"
+                   FontSize="Title"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="End"
+                   BackgroundColor="Blue"/>
+                <Picker x:Name="picker"
+                    Title="Selecciona un item"
+                    TextColor="Black"
+                    TitleColor="Black"
+                    FontSize="20"
+                    SelectedIndexChanged="picker_SelectedIndexChanged">
+                    <Picker.Items>
+                        <x:String>Halo</x:String>
+                        <x:String>Halo 2</x:String>
+                        <x:String>Halo 3</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <ProgressBar x:Name="progress"
+                         Progress=".5"
+                         BackgroundColor="AntiqueWhite"
+                         ProgressColor="LimeGreen">
+                </ProgressBar>
+                <Button x:Name="btnSimulate"
+                    Text="Simulate"
+                    Clicked="btnSimulate_Clicked"/>
+                <Slider x:Name="slider"
+                    Maximum="100"
+                    Minimum="0"
+                    Value="50"
+                    BackgroundColor="LimeGreen"
+                    ThumbColor="AntiqueWhite"
+                    ValueChanged="slider_ValueChanged"/>
+                <Label x:Name="lblDisplay"
+                   TextColor="Black"/>
+
+                <Stepper x:Name="stepper"
+                     Minimum="0"
+                     Maximum="100"
+                     Increment="1"
+                     ValueChanged="stepper_ValueChanged"></Stepper>
+                <Label x:Name="lblDisplayStepper"
+                   TextColor="Black"/>
+
+                <Switch x:Name="toggled"
+                    IsToggled="True"
+                   Toggled="Switch_Toggled" ></Switch>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

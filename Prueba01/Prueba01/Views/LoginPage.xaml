@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Prueba01.LoginPage"
+             Title="Login">
+    <ContentPage.Content>
+        <StackLayout Padding="0"
+                     Spacing="0">
+            <BoxView HorizontalOptions="FillAndExpand"
+                     HeightRequest="100"/>
+            <Image Source="xamarin.png"/>
+            <Entry x:Name="username" 
+                   VerticalOptions="Center"
+                   HorizontalOptions="FillAndExpand"
+                   IsPassword="False"
+                   Placeholder="Username"/>
+
+            <Entry x:Name="password" 
+                   VerticalOptions="Center"
+                   HorizontalOptions="FillAndExpand"
+                   Placeholder="Password"/>
+
+            <Grid>
+                <Label Text="Forgot you password?"
+                   HorizontalTextAlignment="End"
+                   FontAttributes="None"
+                   TextDecorations="Underline">
+                </Label>
+                <Label Text="remember?"
+                   HorizontalTextAlignment="Start"
+                   FontAttributes="None"
+                   TextDecorations="Underline"/>
+                <Switch x:Name="toggled"
+                    IsToggled="True"
+                    Toggled="Switch_Toggled" 
+                    HorizontalOptions="Center"/>
+            </Grid>
+            <Grid ColumnDefinitions="*,*">
+                <Button Grid.Column="1"
+                        Text="Facebook"
+                        BorderRadius="30"
+                        HorizontalOptions="Center"/>
+
+                <Button Grid.Column="2"
+                        Text="Google"
+                        BorderRadius="30"/>
+
+                <Button Grid.Column="3"
+                        Text="Log In"
+                        BorderRadius="30"
+                        Clicked="Button_goHome"/>
+            </Grid>
+            <Button
+                    Text="Registrarse"
+                    TextColor="FloralWhite"
+                    FontSize="Large"
+                    FontAttributes="Italic"
+                    BackgroundColor="SlateGray"
+                    BorderColor="AliceBlue"
+                    BorderWidth="2"
+                    BorderRadius="5"
+                    ContentLayout="Top,40"
+                Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:Prueba01.Views.App"
+       x:Class="Prueba01.Views.App.HomePage">
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Domestic"
+             Icon="paw.png">
+            <ShellContent Title="User"
+                          Icon="user.png"
+                          ContentTemplate="{DataTemplate views:PerfilPage}" />
+            <ShellContent Title="Recursos"
+                          Icon="settings.png"
+                          ContentTemplate="{DataTemplate views:RecursosPage}" />
+        </Tab>
+        <!--
+        Shell has implicit conversion operators that enable the Shell visual hierarchy to be simplified.
+        This is possible because a subclassed Shell object can only ever contain a FlyoutItem object or a TabBar object,
+        which can only ever contain Tab objects, which can only ever contain ShellContent objects.
+
+        The implicit conversion automatically wraps the ShellContent objects below in Tab objects.
+        -->
+        <ShellContent Title="Eventos"
+                      Icon="contacts.png"
+                      ContentTemplate="{DataTemplate views:EventPage}" />
+        <ShellContent Title="Page 3"
+                      Icon="messages.png"
+                      ContentTemplate="{DataTemplate views:Page3}" />
+        <ShellContent Title="ListView"
+                      Icon="settings.png"
+                      ContentTemplate="{DataTemplate views:ListViewPage}" />
+    </FlyoutItem>
+
+    <ShellContent Title="About"
+                  Icon="info.png"
+                  ContentTemplate="{DataTemplate views:AboutPage}" />
+
+</Shell>

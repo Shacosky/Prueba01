@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Prueba01.Views.RegisterPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView Intent="Settings">
+                <TableRoot>
+                    <TableSection Title="Datos generales">
+                        <EntryCell Placeholder="Su nombre"/>
+                    </TableSection>
+                    <TableSection Title="Datos particulares">
+                        <EntryCell Label="Teléfono" 
+                                   Placeholder="(56)955458462"
+                                   Keyboard="Telephone"/>
+                        <SwitchCell Text="Subscrivirse"/>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout>
+                                    <BoxView Color="Red"/>
+                                    <StackLayout>
+                                        <Label Text="test1"/>
+                                        <Label Text="test2"/>
+                                    </StackLayout>
+                                    <BoxView Color="Blue"></BoxView>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
